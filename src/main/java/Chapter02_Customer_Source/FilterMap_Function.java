@@ -1,4 +1,4 @@
-package Chapter02_Customer_Source;
+package main.java.Chapter02_Customer_Source;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.util.Collector;

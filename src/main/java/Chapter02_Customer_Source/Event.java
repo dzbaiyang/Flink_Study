@@ -1,4 +1,4 @@
-package Chapter02_Customer_Source;
+package main.java.Chapter02_Customer_Source;
 
 import java.sql.Timestamp;
 

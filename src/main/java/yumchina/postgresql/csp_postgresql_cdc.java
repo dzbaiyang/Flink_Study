@@ -1,4 +1,4 @@
-package com.yumchina.postgresql;
+package main.java.yumchina.postgresql;
 
 import com.alibaba.ververica.cdc.connectors.postgres.PostgreSQLSource;
 import com.alibaba.ververica.cdc.debezium.StringDebeziumDeserializationSchema;

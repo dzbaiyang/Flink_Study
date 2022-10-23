@@ -1,4 +1,4 @@
-package Chapter02_Customer_Source;
+package main.java.Chapter02_Customer_Source;
 
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
@@ -11,10 +11,10 @@ public class TransforAggSum {
 
         DataStreamSource<Event> stream = env.fromElements(new Event("11", "22", 3000L));
 
-        stream.keyBy(new KeySelector<Event, Object>() {
+        stream.keyBy(new KeySelector<Event, String>() {
             @Override
-            public Object getKey(Event event) throws Exception {
-                return event.user;
+            public String getKey(Event value) throws Exception {
+                return value.user;
             }
         }).max("timestamp").print();
 

@@ -1,4 +1,4 @@
-package Chapter02_Customer_Source;
+package main.java.Chapter02_Customer_Source;
 
 
 //通过添加AddSource调用一个自定义的Source作为源

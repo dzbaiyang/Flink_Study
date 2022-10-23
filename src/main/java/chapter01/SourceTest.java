@@ -1,12 +1,10 @@
-package chapter01;
+package main.java.chapter01;
 
-import com.alibaba.ververica.cdc.debezium.internal.DebeziumChangeConsumer;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Properties;
 

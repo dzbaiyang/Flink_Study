@@ -1,4 +1,4 @@
-package chapter01;
+package main.java.chapter01;
 
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;

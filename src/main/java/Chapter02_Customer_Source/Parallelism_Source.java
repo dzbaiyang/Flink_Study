@@ -1,6 +1,5 @@
-package Chapter02_Customer_Source;
+package main.java.Chapter02_Customer_Source;
 
-import Chapter02_Customer_Source.Event;
 import org.apache.flink.streaming.api.functions.source.ParallelSourceFunction;
 
 import java.util.Calendar;

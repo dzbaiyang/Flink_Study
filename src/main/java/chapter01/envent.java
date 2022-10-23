@@ -1,4 +1,4 @@
-package chapter01;
+package main.java.chapter01;
 
 import java.sql.Timestamp;
 

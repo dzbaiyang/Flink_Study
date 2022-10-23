@@ -1,4 +1,4 @@
-package com.yumchina.wc;
+package main.java.yumchina.wc;
 
 
 import org.apache.flink.api.common.typeinfo.Types;

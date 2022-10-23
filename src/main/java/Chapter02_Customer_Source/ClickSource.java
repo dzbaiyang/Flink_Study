@@ -1,4 +1,4 @@
-package Chapter02_Customer_Source;
+package main.java.Chapter02_Customer_Source;
 
 
 //自定义一个方法来随机生成数据；
