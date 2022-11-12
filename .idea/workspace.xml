@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5957e86c-33cc-4f10-9db4-786a6476f0b5" name="Changes" comment="20221023-version1" />
+    <list default="true" id="5957e86c-33cc-4f10-9db4-786a6476f0b5" name="Changes" comment="20221023-version1">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Chapter02_Customer_Source/TransForReduce_Copy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yumchina/mysql/getmysql_cdc_pgsql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_23_14_081.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_23_14_081/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Chapter02_Customer_Source/TransforAggSum.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,11 +73,12 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/01_Code/Flink_Study",
-    "project.structure.last.edited": "SDKs",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/Project/Flink_Study",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   },
   "keyToStringList": {
     "GitStage.ChangesTree.GroupingKeys": [
@@ -78,20 +88,12 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TransForReduce">
-    <configuration name="TransForReduce (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.Chapter02_Customer_Source.TransForReduce" />
-      <module name="flink-cdc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.java.Chapter02_Customer_Source.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.java.Chapter02_Customer_Source" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.getmysql_cdc_pgsql">
     <configuration name="TransForReduce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.Chapter02_Customer_Source.TransForReduce" />
       <module name="flink-cdc" />
@@ -105,7 +107,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransforAggSum (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TransForReduce_Copy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.Chapter02_Customer_Source.TransForReduce_Copy" />
+      <module name="flink-cdc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.Chapter02_Customer_Source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransforAggSum (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.Chapter02_Customer_Source.TransforAggSum" />
       <module name="flink-cdc" />
       <extension name="coverage">
@@ -118,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransforAggSum (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TransforAggSum (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.Chapter02_Customer_Source.TransforAggSum" />
       <module name="flink-cdc" />
       <extension name="coverage">
@@ -131,14 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransforAggSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="D:\jdk1.8.0\jre" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main.java.Chapter02_Customer_Source.TransforAggSum" />
+    <configuration name="getmysql_cdc_pgsql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.yumchina.mysql.getmysql_cdc_pgsql" />
       <module name="flink-cdc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java.Chapter02_Customer_Source.*" />
+          <option name="PATTERN" value="main.java.yumchina.mysql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,19 +160,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.getmysql_cdc_pgsql" />
+      <item itemvalue="Application.TransforAggSum (1)" />
+      <item itemvalue="Application.TransforAggSum (2)" />
+      <item itemvalue="Application.TransForReduce_Copy" />
       <item itemvalue="Application.TransForReduce" />
-      <item itemvalue="Application.TransForReduce (1)" />
-      <item itemvalue="Application.TransforAggSum" />
-      <item itemvalue="Application.TransforAggSum (3)" />
-      <item itemvalue="Application.TransforAggSum (4)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.getmysql_cdc_pgsql" />
+        <item itemvalue="Application.TransForReduce_Copy" />
+        <item itemvalue="Application.TransforAggSum (1)" />
+        <item itemvalue="Application.TransforAggSum (2)" />
         <item itemvalue="Application.TransForReduce" />
-        <item itemvalue="Application.TransForReduce (1)" />
-        <item itemvalue="Application.TransforAggSum" />
-        <item itemvalue="Application.TransforAggSum (4)" />
-        <item itemvalue="Application.TransforAggSum (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -216,5 +229,9 @@
     <MESSAGE value="1" />
     <MESSAGE value="20221023-version1" />
     <option name="LAST_COMMIT_MESSAGE" value="20221023-version1" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
