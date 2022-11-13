@@ -1,4 +1,4 @@
-package main.java.yumchina.mysql;
+package yumchina.mysql;
 
 import com.alibaba.ververica.cdc.connectors.mysql.MySQLSource;
 import com.alibaba.ververica.cdc.connectors.mysql.table.StartupOptions;
@@ -16,18 +16,18 @@ public class getmysql_cdc_pgsql {
         //获取MySQL数据
 
         DebeziumSourceFunction<String> MySQLFuncation = MySQLSource.<String>builder()
-                .hostname("0.0.0.0")
+                .hostname("localhost")
                 .port(3306)
                 .username("root")
                 .password("hirisun")
-                .databaseList("fakebob.student")
+                .databaseList("classicmodels")
+                .tableList("classicmodels.orderdetails")
                 .deserializer(new StringDebeziumDeserializationSchema())
                 .startupOptions(StartupOptions.initial())
+                .serverTimeZone("GMT")
                 .build();
         DataStreamSource<String> dataStreamSource  = env.addSource(MySQLFuncation);
-
         dataStreamSource.print();
-
-        env.execute();
+        env.execute("getmysql_cdc_pgsql");
     }
 }
