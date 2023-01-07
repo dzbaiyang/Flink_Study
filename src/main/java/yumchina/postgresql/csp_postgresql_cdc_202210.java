@@ -27,7 +27,7 @@ public class csp_postgresql_cdc {
         Configuration configuration = tableEnv.getConfig().getConfiguration();
         configuration.setString("table.dynamic-table-options.enabled", "true");
         configuration.setString("table.exec.sink.not-null-enforcer", "drop");
-        //        tableEnv.executeSql("set table.exec.sink.not-null-enforcer=drop");
+        //tableEnv.executeSql("set table.exec.sink.not-null-enforcer=drop");
 
         env.setParallelism(1);
 
@@ -152,7 +152,71 @@ public class csp_postgresql_cdc {
         TableResult tableResult4 = tableEnv.executeSql("INSERT INTO `default_catalog`.`postgres`.`public__cs_incident_202210_sink` " +
                 "SELECT * FROM `default_catalog`.`postgres`.`public__cs_incident_202210_src`");
 
-        tableResult4.print();
+
+        TableResult tableResult5 = tableEnv.executeSql("" +
+                "CREATE TABLE IF NOT EXISTS `default_catalog`.`postgres`.`public__cs_incident_process_202210_src` (\n" +
+                "  `id` STRING NOT NULL,\n" +
+                "  `incident_no` BIGINT NOT NULL,\n" +
+                "  `process_type` STRING NOT NULL,\n" +
+                "  `role` STRING NOT NULL,\n" +
+                "  `operator_id` STRING NOT NULL,\n" +
+                "  `operator_name` STRING NOT NULL,\n" +
+                "  `content` STRING NOT NULL,\n" +
+                "  `to_dept_no` STRING NULL,\n" +
+                "  `action_date` TIMESTAMP NOT NULL,\n" +
+                "  `operation_type` STRING NULL,\n" +
+                "  `delete_flag` INT NULL,\n" +
+                "  PRIMARY KEY(`id`)\n" +
+                " NOT ENFORCED\n" +
+                ") with (\n" +
+                "  'connector' = 'postgres-cdc',\n" +
+                "  'port' = '1922',\n" +
+                "  'password' = '123@prod',\n" +
+                "  'table-name' = 'cs_incident_process_202210',\n" +
+                "  'hostname' = '172.25.242.245',\n" +
+                "  'username' = 'developer',\n" +
+                "  'database-name' = 'csp_prod_cs',\n" +
+                "  'schema-name' = 'public',\n" +
+                "  'debezium.slot.name' = 'cs_incident_process_202210',\n" +
+                "  'decoding.plugin.name' = 'wal2json'\n" +
+                ");");
+
+        TableResult tableResult6 = tableEnv.executeSql("" +
+                "CREATE TABLE IF NOT EXISTS `default_catalog`.`postgres`.`public__cs_incident_process_202210_sink` (\n" +
+                "  `id` STRING NOT NULL,\n" +
+                "  `incident_no` BIGINT NOT NULL,\n" +
+                "  `process_type` STRING NOT NULL,\n" +
+                "  `role` STRING NOT NULL,\n" +
+                "  `operator_id` STRING NOT NULL,\n" +
+                "  `operator_name` STRING NOT NULL,\n" +
+                "  `content` STRING NOT NULL,\n" +
+                "  `to_dept_no` STRING NULL,\n" +
+                "  `action_date` TIMESTAMP NOT NULL,\n" +
+                "  `operation_type` STRING NULL,\n" +
+                "  `delete_flag` INT NULL,\n" +
+                "  PRIMARY KEY(`id`)\n" +
+                " NOT ENFORCED\n" +
+                ") with (\n" +
+                "  'load-url' = '172.25.201.99:8030',\n" +
+                "  'database-name' = 'csp',\n" +
+                "  'sink.max-retries' = '10',\n" +
+                "  'sink.properties.column_separator' = '\\x01',\n" +
+                "  'sink.properties.row_delimiter' = '\\x02',\n" +
+                "  'sink.properties.format' = 'json',\n" +
+                "  'sink.properties.strip_outer_array' = 'true',\n" +
+                "  'table-name' = 'cs_incident_process',\n" +
+                "  'username' = 'root',\n" +
+                "  'password' = 'fF0&cD2@bS0#',\n" +
+                "  'jdbc-url' = 'jdbc:mysql://172.25.201.99:9030',\n" +
+                "  'sink.buffer-flush.interval-ms' = '15000',\n" +
+                "  'connector' = 'starrocks'\n" +
+                ");");
+
+        TableResult tableResult7 = tableEnv.executeSql("INSERT INTO `default_catalog`.`postgres`.`public__cs_incident_process_202210_sink` " +
+                " SELECT * FROM `default_catalog`.`postgres`.`public__cs_incident_process_202210_src`");
+
+
+        tableResult7.print();
         env.execute("csp_postgresql_cdc");
     }
 }
