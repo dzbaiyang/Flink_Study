@@ -1,9 +1,9 @@
 package main.java.yumchina.mysql;
 
-import com.alibaba.ververica.cdc.connectors.mysql.MySQLSource;
-import com.alibaba.ververica.cdc.connectors.mysql.table.StartupOptions;
-import com.alibaba.ververica.cdc.debezium.DebeziumSourceFunction;
-import com.alibaba.ververica.cdc.debezium.StringDebeziumDeserializationSchema;
+import com.ververica.cdc.connectors.mysql.MySqlSource;
+import com.ververica.cdc.connectors.mysql.table.StartupOptions;
+import com.ververica.cdc.debezium.DebeziumSourceFunction;
+import com.ververica.cdc.debezium.StringDebeziumDeserializationSchema;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
@@ -13,7 +13,7 @@ public class getmysql_cdc_pgsql {
         env.setParallelism(1);
 
         //获取MySQL数据
-        DebeziumSourceFunction<String> MySQLFuncation = MySQLSource.<String>builder()
+        DebeziumSourceFunction<String> MySQLFuncation = MySqlSource.<String>builder()
                 .hostname("localhost")
                 .port(3306)
                 .username("root")
